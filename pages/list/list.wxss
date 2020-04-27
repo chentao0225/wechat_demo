@@ -1,4 +1,6 @@
 /* pages/list/list.wxss */
+@import '../listTemplate/listTemplate.wxss';
+
 .listContainer{
   width:100%;
   height: 400rpx;

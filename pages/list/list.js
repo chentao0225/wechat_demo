@@ -1,18 +1,30 @@
 // pages/list/list.js
+let listDatas=require('../../datas/list-data.js')
+console.log(listDatas,typeof listDatas)
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    listArr:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      listArr:listDatas.list_data
+    })
+  },
+  //跳转detail的方法
+  toDetail(event){
+    console.log(event)
+    let index=event.currentTarget.dataset.index
+    wx.navigateTo({
+      url: '/pages/detail/detail?index='+index,
+    })
   },
 
   /**
